@@ -1,0 +1,18 @@
+<div class="search">
+  <md-input-container class="full-width">
+    <input type="text" mdInput placeholder="Search" (keyup)="onKeyup($event)">
+  </md-input-container>
+  <button md-raised-button color="primary" class="go-button" (click)="getUsers()">Go!</button>
+</div>
+<p *ngIf="searchCount" class="search-count" color="accent">{{searchCount}} found</p>
+<ol *ngIf="searchResult">
+  <div class="search-result">
+    <md-card *ngFor="let user of searchResult.items">
+      <md-card-header>
+        <md-card-title>{{user.login}}</md-card-title>
+        <md-card-subtitle>ID: {{user.id}}</md-card-subtitle>
+      </md-card-header>
+      <img md-card-sm-image [src]="user.avatar_url">
+    </md-card>
+  </div>
+</ol>

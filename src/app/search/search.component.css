@@ -1,0 +1,30 @@
+.search {
+  display: flex;
+  margin-top: 30px;
+  align-items: center;
+  justify-content: center;
+}
+
+.full-width {
+  width: 50%;
+}
+
+.search .full-width {
+  padding: 10px;
+  box-shadow: 0 8px 20px -6px black;
+}
+
+.go-button {
+  margin-left: 10px;
+}
+
+.search-count {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-result {
+  display: flex;
+  flex-wrap: wrap;
+}
