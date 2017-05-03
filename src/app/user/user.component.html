@@ -1,0 +1,21 @@
+<div *ngIf="user" class="user-detail">
+  <md-card>
+    <md-card-header>
+      <img md-card-avatar  [src]="user.avatar_url" alt="avatar">
+      <md-card-title color="foreground">{{user.name}}</md-card-title>
+      <md-card-subtitle color="background">{{user.bio}}</md-card-subtitle>
+    </md-card-header>
+    <img md-card-lg-image [src]="user.avatar_url">
+    <md-card-content class="card-content">
+      <h4 color="foreground">Location: {{user.location}}</h4>
+      <h4 color="foreground">Created on: {{user.created_at | date}}</h4>
+      <h4 color="foreground">Email: {{user.email}}</h4>
+      <h4 color="foreground">Hireable: {{user.hireable}}</h4>
+    </md-card-content>
+    <md-card-actions>
+      <div mdTooltip="Visit GitHub Html" mdTooltipPosition="left">
+        <a [href]="user.html_url"><button md-raised-button color="primary">Go to GitHub</button></a>
+      </div>
+    </md-card-actions>
+  </md-card>
+</div>

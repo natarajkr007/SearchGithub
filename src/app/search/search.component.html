@@ -9,7 +9,9 @@
   <div class="search-result">
     <md-card *ngFor="let user of searchResult.items">
       <md-card-header>
-        <md-card-title>{{user.login}}</md-card-title>
+        <md-card-title>
+          <a md-raised-button (click)="showUserDetail(user)">{{user.login}}</a>
+        </md-card-title>
         <md-card-subtitle>ID: {{user.id}}</md-card-subtitle>
       </md-card-header>
       <img md-card-sm-image [src]="user.avatar_url">
